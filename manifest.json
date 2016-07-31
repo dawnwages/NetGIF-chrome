@@ -1,0 +1,35 @@
+{
+	//REQUIRED
+	"manifest_version" : 2,
+
+	"name" : "NetGIF",
+	"description" : "awesome plugin for Netflix",
+	"version" : "0.1",
+	//icons that represent the extension app
+	"icons" : { "16" : "icon.png",
+				"48" : "icon.png",
+				"128" : "icon.png"},
+
+	//RECOMMENDED
+
+	//Browser actions can have Tooltips, Badges and Popups.
+	"browser_action" : {
+		"default_popup" : "popup.html",
+		"default_icon" : "icon.png",
+		"default_title" : "Gif-ify Me!"
+	},
+	"background" : {
+		"script" : "background.html"
+		//"persistent" : false
+	},
+	//THIS WILL GIVE SPECIFICS INTO THE OPTIONS YOU CAN TURN ON AND OFF OF THE EXTENSION.
+		//OPTIONS WILL INCLUDE THE SHORTCUT KEY
+	"options_page" : "options.html",
+	//OPTIONAL
+	"author" : "Dawn Wages",
+
+	"permissions" : [
+		"activeTab",
+		"https://ajax.googleapis.com/"
+	]
+}
